@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import ComponentWrapper from 'components/General/ComponentWrapper';
+import { Provider } from 'react-redux';
+import store from 'src/app/store';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <Provider store={store}>
+      <ComponentWrapper>
+        <Component {...pageProps} />
+      </ComponentWrapper>
+    </Provider>
+  );
 }
-
-export default MyApp

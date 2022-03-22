@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    ".eslintrc.json": true,
+    ".gitignore": true,
+    ".next": true,
+    "jsconfig.json": true,
+    "next.config.js": true,
+    "node_modules": true,
+    "package.json": true,
+    "public/favicon.ico": true,
+    "README.md": true,
+    "yarn.lock": true,
+  },
+  "cSpell.words": [
+    "raleway"
+  ],
+}
