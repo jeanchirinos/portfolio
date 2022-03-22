@@ -3,6 +3,7 @@ import Logo from 'components/Atoms/Logo';
 import ThemeSwitcher from 'components/Atoms/ThemeSwitcher';
 import GithubLink from 'components/Atoms/GithubLink';
 import { Flex } from 'components/StyledComponents';
+import projects from 'src/data/projects';
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
       <Logo />
       <Flex alignCenter gap="1.5rem">
         <ThemeSwitcher />
-        <GithubLink link="https://github.com/jeanchirinos/portfolio" />
+        <GithubLink link={projects[0].githubLink} />
       </Flex>
     </StyledHeader>
   );
@@ -24,4 +25,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--padding);
+  position: fixed;
+  top: 0;
+  z-index: 9;
 `;
