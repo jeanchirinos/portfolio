@@ -12,12 +12,7 @@ export default function ProjectCard({
   technologies,
 }) {
   const linkToProject = (
-    <div
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-      className="linkToWeb"
-    ></div>
+    <a href={link} target="_blank" rel="noreferrer" className="linkToWeb"></a>
   );
 
   const toastNotification = (
