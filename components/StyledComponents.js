@@ -1,5 +1,13 @@
 import styled, { css } from 'styled-components';
 
+export const Container = styled.section`
+  padding: 0 var(--padding);
+`;
+
+export const Section = styled(Container)`
+  min-height: calc(100vh - var(--header_height));
+`;
+
 export const Flex = styled.article(
   ({
     column,
@@ -8,11 +16,10 @@ export const Flex = styled.article(
     alignCenter,
     justify,
     align,
-    noWrap,
+    $wrap,
     gap,
   }) => css`
     display: flex;
-    flex-wrap: wrap;
 
     flex-direction: ${column && 'column'};
 
@@ -22,7 +29,7 @@ export const Flex = styled.article(
     justify-content: ${justify};
     align-items: ${align};
 
-    flex-wrap: ${noWrap && 'nowrap'};
+    flex-wrap: ${$wrap && 'wrap'};
     gap: ${gap};
 
     ${fullCenter &&

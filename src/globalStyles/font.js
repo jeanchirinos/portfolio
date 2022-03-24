@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 import { fontFamily, fontWeight, lineHeight } from '../style-guide/font';
 
 export const fontVars = css`
-  /* LINE HEIGHTS */
+  /* LINE HEIGHT */
   --lh_1: ${lineHeight._1};
   --lh_2: ${lineHeight._2};
   --lh_3: ${lineHeight._3};
-  /* FONT WEIGHTS */
+  /* FONT WEIGHT */
   --fw_black: ${fontWeight.black};
   --fw_bold: ${fontWeight.bold};
   --fw_regular: ${fontWeight.regular};
@@ -16,7 +16,7 @@ export const fontVars = css`
 export default css`
   //* DEFAULT  */
   body {
-    color: var(--opposite_500);
+    color: var(--font);
     font-family: ${fontFamily.text};
     font-size: var(--fs_6);
     line-height: var(--lh_3);
@@ -60,5 +60,13 @@ export default css`
   .fs-small {
     font-size: var(--fs_7);
     line-height: var(--lh_3);
+  }
+  //* FONT WEIGHT */
+  .fw-bold {
+    font-weight: var(--fw_bold);
+  }
+  .fw-light {
+    color: var(--font_light);
+    font-weight: var(--fw_light);
   }
 `;

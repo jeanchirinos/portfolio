@@ -5,6 +5,7 @@ import GlobalStyles from 'src/globalStyles';
 import useSettings from 'src/features/settingsSlice';
 import { getInitialMode } from 'src/features/settingsSlice';
 import { darkTheme, lightTheme } from 'src/style-guide/themedColors';
+import CustomToaster from 'components/Atoms/CustomToaster';
 
 export default function ComponentWrapper({ children }) {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export default function ComponentWrapper({ children }) {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         {children}
+        <CustomToaster />
       </ThemeProvider>
     )
   );

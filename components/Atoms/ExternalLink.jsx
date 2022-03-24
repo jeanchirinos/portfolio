@@ -13,6 +13,7 @@ export const StyledExternalLink = styled.a`
   display: flex;
   font-size: 1.5rem;
   transition: color 0.3s;
+  cursor: pointer;
 
   :hover {
     color: var(--opposite_600);

@@ -1,3 +1,5 @@
+import { green } from './colors';
+
 const dark = {
   _100: '#808080',
   _200: '#6A696A',
@@ -10,6 +12,11 @@ const dark = {
   _900: '#080708',
   //
   scrollbar_thumb: 'rgba(255, 255, 255, 0.2)',
+  font: '#C7D1CE',
+  font_light: '#B9C6C3',
+  toast_background: green._900,
+  toast_color: green._300,
+  project_card_shadow: '1px 3px 3px 1px rgba(0, 0, 0, 0.2)',
 };
 
 const light = {
@@ -24,6 +31,11 @@ const light = {
   _900: '#808080',
   //
   scrollbar_thumb: 'rgba(0, 0, 0, 0.2)',
+  font: '#45544F',
+  font_light: '#808080',
+  toast_background: green._100,
+  toast_color: green._700,
+  project_card_shadow: '1px 3px 3px 1px rgba(194, 194, 194, 0.2)',
 };
 
 export const darkTheme = {

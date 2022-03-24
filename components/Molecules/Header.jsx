@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Logo from 'components/Atoms/Logo';
 import ThemeSwitcher from 'components/Atoms/ThemeSwitcher';
 import GithubLink from 'components/Atoms/GithubLink';
-import { Flex } from 'components/StyledComponents';
+import { Container, Flex } from 'components/StyledComponents';
 import projects from 'src/data/projects';
 
 export default function Header() {
@@ -17,14 +17,13 @@ export default function Header() {
   );
 }
 
-const StyledHeader = styled.header`
+const StyledHeader = styled(Container)`
   backdrop-filter: blur(4px);
   width: 100%;
-  height: 4rem;
+  height: var(--header_height);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--padding);
   position: fixed;
   top: 0;
   z-index: 9;

@@ -16,6 +16,7 @@ export default createGlobalStyle(
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      /* outline: 1px solid rgba(219, 112, 147, 0.3); */
     }
 
     //* CSS VARS */
@@ -23,6 +24,7 @@ export default createGlobalStyle(
       ${colors}
       ${themedColors(theme)}
       ${fontVars}
+      --header_height: 4rem;
     }
 
     //* MEDIA QUERIES */

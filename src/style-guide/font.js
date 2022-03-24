@@ -1,6 +1,13 @@
+import { green } from './colors';
+
 export const fontFamily = {
   heading: 'Raleway',
   text: 'Prompt',
+};
+
+export const fontColor = {
+  heading: green._100,
+  text: '#000',
 };
 
 export const fontSize = {

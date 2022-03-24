@@ -23,6 +23,11 @@ const themedColors = theme => css`
 
   /*  */
   --scrollbar_thumb: ${theme.scrollbar_thumb};
+  --font: ${theme.font};
+  --font_light: ${theme.font_light};
+  --toast_background: ${theme.toast_background};
+  --toast_color: ${theme.toast_color};
+  --project_card_shadow: ${theme.project_card_shadow};
 `;
 
 export default themedColors;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { animateScroll } from 'react-scroll';
-import SVGLogo from 'public/svg/Logo.svg';
+import SVGLogo from 'static/svg/Logo.svg';
 
 export default function Logo() {
   function scrollToTop() {

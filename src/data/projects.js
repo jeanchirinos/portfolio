@@ -1,28 +1,27 @@
-import Porfolio from 'public/img/Portfolio.png';
-import FilesHandling from 'public/img/FilesHandling.png';
-import OhCloud from 'public/img/OhCloud.png';
 import personalInfo from './personalInfo';
+
+const github = personalInfo.links.github;
+const img = 'static/img';
 
 const projects = [
   {
     name: 'Portafolio',
-    img: Porfolio,
-    githubLink: `${personalInfo.links.github}/Portfolio`,
+    img: `${img}/Portfolio.png`,
+    githubLink: `${github}/Portfolio`,
     technologies: ['React', 'Styled', 'Redux'],
   },
   {
     name: 'Files handling',
-    img: FilesHandling,
+    img: `${img}/FilesHandling.png`,
     link: 'https://files-handling.vercel.app/',
-    githubLink: `${personalInfo.links.github}/files-handling`,
+    githubLink: `${github}/files-handling`,
     technologies: ['React', 'Next', 'Styled', 'Redux'],
   },
   {
     name: 'Oh! Cloud',
-    img: OhCloud,
-    type: 'page',
+    img: `${img}/OhCloud.png`,
     link: 'https://oh-cloud.vercel.app/',
-    githubLink: `${personalInfo.links.github}/oh-cloud`,
+    githubLink: `${github}/oh-cloud`,
     technologies: ['Html', 'Js'],
   },
 ];

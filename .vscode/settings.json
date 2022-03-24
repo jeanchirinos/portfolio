@@ -7,11 +7,12 @@
     "next.config.js": true,
     "node_modules": true,
     "package.json": true,
-    "public/favicon.ico": true,
+    "public": true,
     "README.md": true,
     "yarn.lock": true,
   },
   "cSpell.words": [
+    "palevioletred",
     "raleway"
   ],
 }
