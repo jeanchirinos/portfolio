@@ -5,7 +5,7 @@ const dark = {
   _200: '#6A696A',
   _300: '#545253',
   _400: '#3E3B3D',
-  _500: '#282426',
+  _500: '#222222',
   _600: '#201D1F',
   _700: '#181617',
   _800: '#100F0F',
@@ -16,7 +16,8 @@ const dark = {
   font_light: '#B9C6C3',
   toast_background: green._900,
   toast_color: green._300,
-  project_card_shadow: '1px 3px 3px 1px rgba(0, 0, 0, 0.2)',
+  project_card_shadow: '1px 4px 4px 1px rgba(0, 0, 0, 0.4)',
+  code_editor_background: '#282C34',
 };
 
 const light = {
@@ -35,7 +36,8 @@ const light = {
   font_light: '#808080',
   toast_background: green._100,
   toast_color: green._700,
-  project_card_shadow: '1px 3px 3px 1px rgba(194, 194, 194, 0.2)',
+  project_card_shadow: '1px 4px 4px 1px rgba(194, 194, 194, 0.4)',
+  code_editor_background: '#F5F3F4',
 };
 
 export const darkTheme = {

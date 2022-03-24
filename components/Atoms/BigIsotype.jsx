@@ -22,7 +22,7 @@ export default function BigIsotype({ name }) {
 
 export const StyledIsotype = styled.svg(
   ({ active, color, activeColor }) => css`
-    fill: var(--theme_400);
+    fill: transparent;
     cursor: pointer;
     transition: fill 0.3s, color 0.3s, transform 0.3s;
     width: 6.5rem;

@@ -28,6 +28,7 @@ const themedColors = theme => css`
   --toast_background: ${theme.toast_background};
   --toast_color: ${theme.toast_color};
   --project_card_shadow: ${theme.project_card_shadow};
+  --code_editor_background: ${theme.code_editor_background};
 `;
 
 export default themedColors;

@@ -12,7 +12,12 @@ export default function ProjectCard({
   technologies,
 }) {
   const linkToProject = (
-    <a href={link} target="_blank" rel="noreferrer" className="linkToWeb"></a>
+    <div
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="linkToWeb"
+    ></div>
   );
 
   const toastNotification = (
@@ -51,11 +56,12 @@ const StyledProjectCard = styled.div(
     box-shadow: var(--project_card_shadow);
 
     display: grid;
-    grid: 75% 25% / 100%;
+    grid: 75% 26% / 100%;
 
     .linkToWeb {
       cursor: pointer;
       transition: background-color 0.3s;
+      border-radius: 12px 12px 0 0;
 
       :hover {
         background-color: rgba(0, 0, 0, 0.1);
@@ -69,6 +75,7 @@ const StyledProjectCard = styled.div(
       justify-content: space-between;
       position: relative;
       background-color: var(--theme_500);
+      border-radius: 0 0 12px 12px;
 
       #links {
         position: absolute;

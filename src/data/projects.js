@@ -5,7 +5,7 @@ const img = 'static/img';
 
 const projects = [
   {
-    name: 'Portafolio',
+    name: 'Portfolio',
     img: `${img}/Portfolio.png`,
     githubLink: `${github}/Portfolio`,
     technologies: ['React', 'Styled', 'Redux'],

@@ -2,6 +2,7 @@ import {
   Component,
   HtmlTag,
   Punctuation,
+  StyleValue,
 } from 'components/Organisms/CodeEditor';
 
 export function Indent({ indent }) {
@@ -43,5 +44,17 @@ export function Tag({ children, htmlTag, toClose, autoClose }) {
       {selectedTag}
       {closeType}
     </>
+  );
+}
+
+export function Style({ indent, prop, children }) {
+  return (
+    <div>
+      <Indent indent={indent} />
+      <code>{prop}</code>
+      <Punctuation>: </Punctuation>
+      <StyleValue>{children}</StyleValue>
+      <Punctuation>;</Punctuation>
+    </div>
   );
 }

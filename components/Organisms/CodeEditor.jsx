@@ -19,7 +19,7 @@ export default function CodeEditor() {
 }
 
 const StyledCodeEditor = styled.div`
-  background-color: var(--theme_400);
+  background-color: var(--code_editor_background);
   width: min(450px, var(--100vw));
   height: 350px;
   border-radius: 8px;
@@ -60,4 +60,8 @@ export const Attribute = styled.code`
 
 export const String = styled.code`
   color: #88c6be;
+`;
+
+export const StyleValue = styled.code`
+  color: #fca1a1;
 `;
