@@ -6,9 +6,9 @@ export default css`
   }
 
   #__next {
-    margin-top: 4rem;
     display: grid;
     gap: var(--sections_gap);
+    margin-top: var(--margin_top);
   }
 
   .toaster {

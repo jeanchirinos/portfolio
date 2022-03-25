@@ -5,8 +5,10 @@ import { fontSize } from '../style-guide/font';
 export default css`
   //* XS */
   ${mediaQueries.xs} {
+    --header_height: 5rem;
     --padding: 0.5rem;
     --sections_gap: calc(var(--header_height) * 2);
+    --margin_top: calc(var(--header_height) + 2rem);
     --100vw: calc(100vw - var(--padding) * 2 - 10px);
     //*? FONT SIZE */
     --fs_1: ${fontSize._2};
@@ -32,6 +34,7 @@ export default css`
   ${mediaQueries.lg} {
     --sections_gap: 0;
     --padding: 2.5rem;
+    --margin_top: var(--header_height);
     --fs_1: ${fontSize._1};
     --fs_2: ${fontSize._2};
     --fs_3: ${fontSize._3};

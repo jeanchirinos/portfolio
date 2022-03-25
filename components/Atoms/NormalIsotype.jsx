@@ -7,19 +7,15 @@ export default function NormalIsotype({ name }) {
   const [component, color, activeColor] = useTechnology(name);
   const { activeTechs, setActiveTechs } = useSettings();
 
-  const active = activeTechs.includes(name);
+  const props = {
+    color,
+    active: activeTechs.includes(name),
+    activeColor,
+    viewBox: '0 0 104 104',
+    onClick: () => setActiveTechs(name),
+  };
 
-  return (
-    <StyledNormalIsotype
-      color={color}
-      active={active}
-      onClick={() => setActiveTechs(name)}
-      activeColor={activeColor}
-      viewBox="0 0 104 104"
-    >
-      {component}
-    </StyledNormalIsotype>
-  );
+  return <StyledNormalIsotype {...props}>{component}</StyledNormalIsotype>;
 }
 
 const StyledNormalIsotype = styled(StyledIsotype)`

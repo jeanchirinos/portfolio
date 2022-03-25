@@ -2,8 +2,10 @@ import NormalIsotype from 'components/Atoms/NormalIsotype';
 import styled from 'styled-components';
 
 export default function FilterIsotype({ name, fullName }) {
+  const title = fullName || name;
+
   return (
-    <StyledFilterIsotype title={fullName || name}>
+    <StyledFilterIsotype title={title}>
       <NormalIsotype name={name} />
       <p className="fs-small fw-light">{name}</p>
     </StyledFilterIsotype>

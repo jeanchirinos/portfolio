@@ -3,27 +3,25 @@ import useSettings from 'src/features/settingsSlice';
 import { CgLock, CgLockUnlock } from 'react-icons/cg';
 
 export default function ScrollToggle() {
-  const { codeScroll, toggleCodeScroll } = useSettings();
+  const { codeScrollIsActive, toggleCodeScroll } = useSettings();
 
-  const scrollToggle = codeScroll ? <CgLockUnlock /> : <CgLock />;
+  const component = codeScrollIsActive ? <CgLockUnlock /> : <CgLock />;
 
-  return (
-    <StyledScrollToggle
-      active={codeScroll}
-      onClick={toggleCodeScroll}
-      title="Scroll !"
-    >
-      {scrollToggle}
-    </StyledScrollToggle>
-  );
+  const props = {
+    codeScrollIsActive,
+    onClick: toggleCodeScroll,
+    title: 'Scroll !',
+  };
+
+  return <StyledScrollToggle {...props}>{component}</StyledScrollToggle>;
 }
 
 const StyledScrollToggle = styled.span(
-  ({ active }) => css`
+  ({ codeScrollIsActive }) => css`
     display: flex;
     font-size: 1.3rem;
     position: absolute;
-    color: ${active ? 'var(--primary_500)' : 'var(--opposite_400)'};
+    color: ${codeScrollIsActive ? 'var(--primary_500)' : 'var(--opposite_400)'};
     top: 10px;
     right: 20px;
     cursor: pointer;

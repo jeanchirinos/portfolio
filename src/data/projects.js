@@ -7,8 +7,8 @@ const projects = [
   {
     name: 'Portfolio',
     img: `${img}/Portfolio.png`,
-    githubLink: `${github}/Portfolio`,
-    technologies: ['React', 'Styled', 'Redux'],
+    githubLink: `${github}/portfolio`,
+    technologies: ['React', 'Next', 'Styled', 'Redux'],
   },
   {
     name: 'Files handling',

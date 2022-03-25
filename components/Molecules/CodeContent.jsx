@@ -1,112 +1,69 @@
-import { Indent, Style, Tag } from 'components/Atoms/CodeEditorElements';
+import { Line, Tag, Style } from 'components/Atoms/CodeEditorElements';
 import {
-  Attribute,
-  Component,
-  Function,
-  HtmlTag,
-  Keyword,
-  Punctuation,
-  String,
-} from 'components/Organisms/CodeEditor';
+  Att,
+  Com,
+  Key,
+  Fun,
+  Pun,
+  Htm,
+  Str,
+} from 'components/Atoms/CodeEditorElements';
 
 export function React() {
   return (
     <>
-      <div>
-        <Keyword>export default function </Keyword>
-        <Function>Summary</Function>
-        <Punctuation>{'(){'}</Punctuation>
-      </div>
-      <div>
-        <Indent indent={1} />
-        <Keyword>return (</Keyword>
-      </div>
-      <div>
-        <Indent indent={2} />
+      <Line>
+        <Key>export default function </Key>
+        <Fun>Summary</Fun>
+        <Pun>{'(){'}</Pun>
+      </Line>
+      <Line i={1}>
+        <Key>return </Key>
+        <Pun>{'('}</Pun>
+      </Line>
+      <Line i={2}>
         <Tag>StyledSummary</Tag>
-      </div>
-      <div>
-        <Indent indent={3} />
-        <Punctuation>{'<'}</Punctuation>
-        <Component>Flex</Component>
-        <Attribute> column fullCenter gap</Attribute>
-        <Punctuation>{'='}</Punctuation>
-        <Punctuation>{'"'}</Punctuation>
-        <String>0.5rem</String>
-        <Punctuation>{'"'}</Punctuation>
-        <Punctuation>{'>'}</Punctuation>
-      </div>
-      <div>
-        <Indent indent={4} />
-        <Tag htmlTag>h1</Tag>
+      </Line>
+      <Line i={3}>
+        <Pun>{'<'}</Pun>
+        <Com>Flex </Com>
+        <Att>column fullCenter gap</Att>
+        <Pun>{"='"}</Pun>
+        <Str>0.5rem</Str>
+        <Pun>{"'>"}</Pun>
+      </Line>
+      <Line i={4}>
+        <Tag html>h1</Tag>
         <code>JEAN</code>
-        <Tag htmlTag toClose>
+        <Tag html toClose>
           h1
         </Tag>
-      </div>
-      <div>
-        <Indent indent={4} />
-        <Tag htmlTag>h3</Tag>
+      </Line>
+      <Line i={4}>
+        <Tag html>h3</Tag>
         <code>Frontend Developer</code>
-        <Tag htmlTag toClose>
+        <Tag html toClose>
           h3
         </Tag>
-      </div>
-      <div>
-        <Indent indent={4} />
+      </Line>
+      <Line i={4}>
         <Tag autoClose>PersonalPicture</Tag>
-        <br />
-        <Indent indent={4} />
+      </Line>
+      <Line i={4}>
         <Tag autoClose>PersonalLinks</Tag>
-      </div>
-      <div>
-        <Indent indent={3} />
+      </Line>
+      <Line i={3}>
         <Tag toClose>Flex</Tag>
-        <br />
-        <Indent indent={3} />
-        <Tag>Flex</Tag>
-      </div>
-
-      <div>
-        <Indent indent={4} />
-        <Tag autoClose>AnimatedArrow</Tag>
-        <br />
-        <Indent indent={4} />
-        <Tag autoClose>MainIsotypes</Tag>
-        <br />
-        <Indent indent={4} />
-        <Tag autoClose>CodeEditor</Tag>
-        <br />
-        <Indent indent={4} />
-        <Tag autoClose>AnimatedArrow</Tag>
-      </div>
-
-      <div>
-        <Indent indent={3} />
-        <Tag toClose>Flex</Tag>
-        <br />
-        <Indent indent={3} />
-        <Tag>Flex</Tag>
-      </div>
-      <div>
-        <Indent indent={4} />
-        <Tag autoClose>ProjectPicture</Tag>
-      </div>
-      <div>
-        <Indent indent={3} />
-        <Tag toClose>Flex</Tag>
-      </div>
-      <div>
-        <Indent indent={2} />
+      </Line>
+      <Line i={2}>
         <Tag toClose>StyledSummary</Tag>
-      </div>
-      <div>
-        <Indent indent={1} />
-        <Keyword>)</Keyword>
-      </div>
-      <div>
-        <Punctuation>{'}'}</Punctuation>
-      </div>
+      </Line>
+      <Line i={1}>
+        <Pun>{')'}</Pun>
+      </Line>
+      <Line>
+        <Pun>{'}'}</Pun>
+      </Line>
     </>
   );
 }
@@ -114,47 +71,46 @@ export function React() {
 export function StyledComponents() {
   return (
     <>
-      <div>
-        <Keyword>const </Keyword>
-        <Function>StyledHeader </Function>
-        <Punctuation>{'= '}</Punctuation>
-        <Function>styled</Function>
-        <Punctuation>{'('}</Punctuation>
+      <Line>
+        <Key>const </Key>
+        <Fun>StyledHeader </Fun>
+        <Pun>{'= '}</Pun>
+        <Fun>styled</Fun>
+        <Pun>{'('}</Pun>
         <code>Container</code>
-        <Punctuation>{')'}</Punctuation>
-        <Punctuation>{'`'}</Punctuation>
-      </div>
+        <Pun>{')`'}</Pun>
+      </Line>
       <br />
-      <Style indent={1} prop="width">
+      <Style i={1} prop="width">
         100%
       </Style>
-      <Style indent={1} prop="height">
+      <Style i={1} prop="height">
         var(--headerHeight)
       </Style>
-      <Style indent={1} prop="backdrop-filter">
+      <Style i={1} prop="backdrop-filter">
         blur(2px)
       </Style>
-      <Style indent={1} prop="display">
+      <Style i={1} prop="display">
         flex
       </Style>
-      <Style indent={1} prop="justify-content">
+      <Style i={1} prop="justify-content">
         space-between
       </Style>
-      <Style indent={1} prop="align-items">
+      <Style i={1} prop="align-items">
         center
       </Style>
-      <Style indent={1} prop="position">
+      <Style i={1} prop="position">
         fixed
       </Style>
-      <Style indent={1} prop="top">
+      <Style i={1} prop="top">
         0
       </Style>
-      <Style indent={1} prop="z-index">
+      <Style i={1} prop="z-index">
         1
       </Style>
-      <div>
-        <Punctuation>{'`'}</Punctuation>
-      </div>
+      <Line>
+        <Pun>{'`'}</Pun>
+      </Line>
     </>
   );
 }
@@ -162,72 +118,61 @@ export function StyledComponents() {
 export function Redux() {
   return (
     <>
-      <div>
-        <Keyword>const </Keyword>
-        <Function>settingsSlice </Function>
-        <Punctuation>{'= '}</Punctuation>
-        <Function>createSlice</Function>
-        <Punctuation>{'({'}</Punctuation>
-      </div>
-      <div>
-        <Indent indent="1" />
+      <Line>
+        <Key>const </Key>
+        <Fun>settingsSlice </Fun>
+        <Pun>{'= '}</Pun>
+        <Fun>createSlice</Fun>
+        <Pun>{'({'}</Pun>
+      </Line>
+      <Line i={1}>
         <code>name</code>
-        <Punctuation>: </Punctuation>
-        <String>{'settingsSlice'}</String>
-        <Punctuation>,</Punctuation>
-      </div>
-      <div>
-        <Indent indent="1" />
+        <Pun>: </Pun>
+        <Str>{"'settingsSlice'"}</Str>
+        <Pun>,</Pun>
+      </Line>
+      <Line i={1}>
         <code>initialState</code>
-        <Punctuation>,</Punctuation>
-      </div>
+        <Pun>,</Pun>
+      </Line>
       <br />
-      <div>
-        <Indent indent="1" />
+      <Line i={1}>
         <code>reducers</code>
-        <Punctuation>: </Punctuation>
-        <Punctuation>{'{'}</Punctuation>
-      </div>
-      <div>
-        <Indent indent="2" />
-        <Function>toggleDarkMode</Function>
-        <Punctuation>: </Punctuation>
+        <Pun>{': {'} </Pun>
+      </Line>
+      <Line i={2}>
+        <Fun>toggleDarkMode</Fun>
+        <Pun>: </Pun>
         <code>s </code>
-        <Punctuation>{'=> {'}</Punctuation>
-      </div>
-      <div>
-        <Indent indent="3" />
+        <Pun>{'=> {'}</Pun>
+      </Line>
+      <Line i={3}>
         <code>s</code>
-        <Punctuation>.</Punctuation>
-        <HtmlTag>darkMode</HtmlTag>
-        <Punctuation>{' = '}</Punctuation>
-        <Punctuation>!</Punctuation>
+        <Pun>.</Pun>
+        <Htm>darkMode</Htm>
+        <Pun>{' = !'}</Pun>
         <code>s</code>
-        <Punctuation>.</Punctuation>
-        <HtmlTag>darkMode</HtmlTag>
-      </div>
-      <div>
-        <Indent indent="3" />
+        <Pun>.</Pun>
+        <Htm>darkMode</Htm>
+      </Line>
+      <Line i={3}>
         <code>localStorage</code>
-        <Punctuation>.</Punctuation>
-        <HtmlTag>darkMode</HtmlTag>
-        <Punctuation>{' = '}</Punctuation>
+        <Pun>.</Pun>
+        <Htm>darkMode</Htm>
+        <Pun>{' = '}</Pun>
         <code>s</code>
-        <Punctuation>.</Punctuation>
-        <HtmlTag>darkMode</HtmlTag>
-      </div>
-      <div>
-        <Indent indent="2" />
-        <Punctuation>{'},'}</Punctuation>
-      </div>
-      <div>
-        <Indent indent="1" />
-        <Punctuation>{'},'}</Punctuation>
-      </div>
-
-      <div>
-        <Punctuation>{'})'}</Punctuation>
-      </div>
+        <Pun>.</Pun>
+        <Htm>darkMode</Htm>
+      </Line>
+      <Line i={2}>
+        <Pun>{'},'}</Pun>
+      </Line>
+      <Line i={1}>
+        <Pun>{'},'}</Pun>
+      </Line>
+      <Line>
+        <Pun>{'})'}</Pun>
+      </Line>
     </>
   );
 }

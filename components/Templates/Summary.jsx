@@ -65,13 +65,14 @@ const StyledSummary = styled(Section)`
     }
 
     ${StyledAnimatedArrow} {
-      transform: rotate(270deg);
+      transform: rotate(315deg);
     }
   }
 
   ${mediaQueries.xl} {
     > ${Flex}:nth-child(2) {
       justify-content: space-around;
+      gap: 0;
     }
   }
 `;

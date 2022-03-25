@@ -24,7 +24,6 @@ export default createGlobalStyle(
       ${colors}
       ${themedColors(theme)}
       ${fontVars}
-      --header_height: 4rem;
     }
 
     //* MEDIA QUERIES */

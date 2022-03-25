@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-// import { ProjectCard } from '..';
-import { useEffect, useState } from 'react';
-// import useSettings from '../../features/settingsSlice';
 import projects from 'src/data/projects';
 import mediaQueries from 'src/style-guide/breakpoints';
 import ProjectCard from 'components/Molecules/ProjectCard';
@@ -16,7 +13,7 @@ export default function ListOfProjects() {
     );
   }
 
-  function getProjectsGrid() {
+  function getProjects() {
     const filteredProjects = projects.filter(project =>
       includesTechsSelected(project)
     );
@@ -28,27 +25,17 @@ export default function ListOfProjects() {
     return projectsToShow;
   }
 
-  return <StyledListOfProjects>{getProjectsGrid()}</StyledListOfProjects>;
+  return <StyledListOfProjects>{getProjects()}</StyledListOfProjects>;
 }
 
 const StyledListOfProjects = styled.div`
   display: grid;
+  gap: 1.5rem;
+  grid-auto-rows: 20rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
 
-  ${mediaQueries.xs} {
-    gap: 1rem;
-    padding: 1rem 0;
-    grid-auto-rows: 20rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
-  }
-  ${mediaQueries.md} {
-    flex-grow: 1;
-    gap: 2rem;
-    padding: 2.5rem 0;
-    grid-auto-rows: 25rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  }
-
-  ${mediaQueries.lg} {
-    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  ${mediaQueries.sm} {
+    grid-auto-rows: 23rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }
 `;

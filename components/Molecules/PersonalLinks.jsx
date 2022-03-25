@@ -6,10 +6,13 @@ import { Flex } from 'components/StyledComponents';
 import EmailLink from 'components/Atoms/EmailLink';
 
 export default function PersonalLinks() {
+  const { links } = personalInfo;
+  const { github, linkedin } = links;
+
   return (
     <Flex gap="0.8rem">
-      <GithubLink link={personalInfo.links.github} />
-      <ExternalLink link={personalInfo.links.linkedin}>
+      <GithubLink link={github} />
+      <ExternalLink link={linkedin}>
         <AiFillLinkedin />
       </ExternalLink>
       <EmailLink />
