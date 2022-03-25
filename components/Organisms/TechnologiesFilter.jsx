@@ -14,7 +14,6 @@ export default function TechnologiesFilter() {
 
 const StyledFilterIsotypes = styled.div`
   width: var(--100vw);
-  height: fit-content;
   padding: 1rem 0;
   display: flex;
   gap: 1.5rem;

@@ -6,10 +6,8 @@ import CodeEditor from 'components/Organisms/CodeEditor';
 import PersonalPicture from 'static/img/PersonalPicture.png';
 import { Flex, Section } from 'components/StyledComponents';
 import mediaQueries from 'src/style-guide/breakpoints';
-import AnimatedArrow, {
-  StyledAnimatedArrow,
-} from 'components/Atoms/AnimatedArrow';
 import PortfolioDemo from 'static/img/PortfolioDemo.png';
+import AnimatedArrow from 'components/Atoms/AnimatedArrow';
 
 export default function Summary() {
   return (
@@ -26,14 +24,12 @@ export default function Summary() {
         />
         <PersonalLinks />
       </Flex>
-      <Flex column fullCenter gap="3rem">
-        <AnimatedArrow />
-        <Flex column fullCenter gap="1rem">
-          <MainIsotypes />
-          <CodeEditor />
-        </Flex>
-        <AnimatedArrow />
+      <AnimatedArrow />
+      <Flex column fullCenter gap="1rem">
+        <MainIsotypes />
+        <CodeEditor />
       </Flex>
+      <AnimatedArrow />
       <Flex fullCenter>
         <Image
           src={PortfolioDemo}
@@ -51,28 +47,8 @@ const StyledSummary = styled(Section)`
   display: grid;
   gap: 2.5rem;
 
-  > ${Flex}:first-child {
-    text-align: center;
-  }
-
   ${mediaQueries.lg} {
     gap: 0;
-    grid: 100% / 25% 45% 30%;
-
-    > ${Flex}:nth-child(2) {
-      flex-direction: row;
-      gap: 2rem;
-    }
-
-    ${StyledAnimatedArrow} {
-      transform: rotate(315deg);
-    }
-  }
-
-  ${mediaQueries.xl} {
-    > ${Flex}:nth-child(2) {
-      justify-content: space-around;
-      gap: 0;
-    }
+    grid: 100% / calc(30% - 75px) 75px 40% 75px calc(30% - 75px);
   }
 `;

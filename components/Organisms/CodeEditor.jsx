@@ -21,7 +21,6 @@ const StyledCodeEditor = styled.pre`
   padding: 1rem;
   border-radius: 8px;
   position: relative;
-  font-size: 1rem;
   overflow-x: auto;
   overflow-y: hidden;
 `;

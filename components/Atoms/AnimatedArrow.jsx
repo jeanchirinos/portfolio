@@ -1,11 +1,31 @@
+import mediaQueries from 'src/style-guide/breakpoints';
 import styled from 'styled-components';
 
 export default function AnimatedArrow() {
-  return <StyledAnimatedArrow />;
+  return (
+    <StyledWrapper>
+      <StyledAnimatedArrow />
+    </StyledWrapper>
+  );
 }
+const StyledWrapper = styled.div`
+  height: 75px;
+  display: flex;
+  justify-content: center;
 
-export const StyledAnimatedArrow = styled.span`
+  ${mediaQueries.lg} {
+    width: 75px;
+    height: 100%;
+    flex-direction: column;
+  }
+`;
+
+const StyledAnimatedArrow = styled.div`
   transform: rotate(45deg);
+
+  ${mediaQueries.lg} {
+    transform: rotate(315deg);
+  }
 
   :after {
     content: '';

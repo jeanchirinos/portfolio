@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 const initialState = {
   darkMode: null,
   mainTechSelected: 'React',
-  codeScrollIsActive: false,
   activeTechs: ['React'],
 };
 
@@ -33,9 +32,6 @@ const settingsSlice = createSlice({
     setMainTechSelected: (s, { payload }) => {
       s.mainTechSelected = payload;
     },
-    toggleCodeScroll: s => {
-      s.codeScrollIsActive = !s.codeScrollIsActive;
-    },
     setActiveTechs: (s, { payload }) => {
       const techIndex = s.activeTechs.indexOf(payload);
       const techIsNotInTheList = techIndex === -1;
@@ -53,7 +49,6 @@ const settingsSlice = createSlice({
 //? States
 const darkMode = s => s.settings.darkMode;
 const mainTechSelected = s => s.settings.mainTechSelected;
-const codeScrollIsActive = s => s.settings.codeScrollIsActive;
 const activeTechs = s => s.settings.activeTechs;
 
 //? Actions
@@ -61,7 +56,6 @@ export const {
   getInitialMode,
   toggleDarkMode,
   setMainTechSelected,
-  toggleCodeScroll,
   setActiveTechs,
 } = settingsSlice.actions;
 
@@ -75,11 +69,9 @@ export default function useSettings() {
   return {
     darkMode: useSelector(darkMode),
     mainTechSelected: useSelector(mainTechSelected),
-    codeScrollIsActive: useSelector(codeScrollIsActive),
     activeTechs: useSelector(activeTechs),
     toggleDarkMode: () => dispatch(toggleDarkMode()),
     setMainTechSelected: payload => dispatch(setMainTechSelected(payload)),
-    toggleCodeScroll: () => dispatch(toggleCodeScroll()),
     setActiveTechs: payload => dispatch(setActiveTechs(payload)),
   };
 }
