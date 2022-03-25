@@ -12,7 +12,9 @@ import '@fontsource/prompt/300.css';
 export default createGlobalStyle(
   ({ theme }) => css`
     //* RESET */
-    * {
+    *,
+    :before,
+    :after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
