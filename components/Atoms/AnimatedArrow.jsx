@@ -9,14 +9,12 @@ export default function AnimatedArrow() {
   );
 }
 const StyledWrapper = styled.div`
-  height: 75px;
   display: flex;
   justify-content: center;
 
   ${mediaQueries.lg} {
-    width: 75px;
-    height: 100%;
     flex-direction: column;
+    height: 100%;
   }
 `;
 
@@ -24,7 +22,7 @@ const StyledAnimatedArrow = styled.div`
   transform: rotate(45deg);
 
   ${mediaQueries.lg} {
-    transform: rotate(315deg);
+    transform: rotate(-45deg);
   }
 
   :after {
@@ -40,7 +38,6 @@ const StyledAnimatedArrow = styled.div`
   @keyframes animate {
     0% {
       opacity: 0;
-      transform: translate(-5px, -5px);
     }
     50% {
       opacity: 1;
