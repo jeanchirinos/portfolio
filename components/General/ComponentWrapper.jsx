@@ -18,12 +18,10 @@ export default function ComponentWrapper({ children }) {
   const theme = darkMode ? darkTheme : lightTheme;
 
   return (
-    darkTheme != null && (
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        {children}
-        <CustomToaster />
-      </ThemeProvider>
-    )
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {children}
+      <CustomToaster />
+    </ThemeProvider>
   );
 }
