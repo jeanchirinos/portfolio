@@ -25,8 +25,6 @@ const StyledCodeEditor = styled.pre`
   overflow-y: hidden;
 
   div {
-    white-space: nowrap;
-    width: 100%;
     animation: typing 2s;
     overflow: hidden;
   }
@@ -34,6 +32,9 @@ const StyledCodeEditor = styled.pre`
   @keyframes typing {
     from {
       width: 0;
+    }
+    to {
+      width: 100%;
     }
   }
 `;
