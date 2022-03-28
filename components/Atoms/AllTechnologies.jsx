@@ -1,11 +1,4 @@
-import {
-  React,
-  Redux,
-  StyledComponents,
-  Next,
-  Javascript,
-  Html,
-} from './Isotype';
+import { React, Redux, Styled, Next, Js, Html } from './Isotype';
 
 const technologies = [
   {
@@ -16,7 +9,7 @@ const technologies = [
   {
     name: 'Styled',
     fullName: 'Styled Components',
-    component: <StyledComponents />,
+    component: <Styled />,
     color: '#efaa69',
   },
   {
@@ -32,7 +25,7 @@ const technologies = [
   {
     name: 'Js',
     fullName: 'Javascript',
-    component: <Javascript />,
+    component: <Js />,
     color: '#F7DF1E',
     activeColor: 'black',
   },

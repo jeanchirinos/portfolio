@@ -23,4 +23,17 @@ const StyledCodeEditor = styled.pre`
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
+
+  div {
+    white-space: nowrap;
+    width: 100%;
+    animation: typing 2s;
+    overflow: hidden;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
 `;

@@ -23,11 +23,11 @@ export default css`
 
   ::-webkit-scrollbar {
     background-color: var(--theme_500);
-    width: 10px;
+    width: var(--scrollbar_width);
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar_thumb);
-    border-radius: 10px;
+    border-radius: var(--scrollbar_width);
   }
 `;

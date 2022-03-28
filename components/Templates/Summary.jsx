@@ -5,7 +5,7 @@ import MainIsotypes from 'components/Molecules/MainIsotypes';
 import CodeEditor from 'components/Organisms/CodeEditor';
 import PersonalPicture from 'static/img/PersonalPicture.png';
 import { Flex, Section } from 'components/StyledComponents';
-import mediaQueries from 'src/style-guide/breakpoints';
+import media from 'src/style-guide/breakpoints';
 import PortfolioDemo from 'static/img/PortfolioDemo.png';
 import AnimatedArrow from 'components/Atoms/AnimatedArrow';
 
@@ -47,7 +47,7 @@ const StyledSummary = styled(Section)`
   display: grid;
   gap: 2.5rem;
 
-  ${mediaQueries.lg} {
+  ${media.lg} {
     gap: 0;
     grid: 100% / calc(30% - 75px) 75px 40% 75px calc(30% - 75px);
   }

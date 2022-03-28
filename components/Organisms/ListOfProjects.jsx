@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import projects from 'src/data/projects';
-import mediaQueries from 'src/style-guide/breakpoints';
+import media from 'src/style-guide/breakpoints';
 import ProjectCard from 'components/Molecules/ProjectCard';
 import useSettings from 'src/features/settingsSlice';
 
@@ -34,7 +34,7 @@ const StyledListOfProjects = styled.div`
   grid-auto-rows: 20rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
 
-  ${mediaQueries.sm} {
+  ${media.sm} {
     grid-auto-rows: 23rem;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }

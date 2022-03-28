@@ -14,7 +14,7 @@ export function React() {
   );
 }
 
-export function StyledComponents() {
+export function Styled() {
   return (
     <>
       <rect width="104" height="104" rx="8" fill="current" />
@@ -72,7 +72,7 @@ export function Next() {
   );
 }
 
-export function Javascript() {
+export function Js() {
   return (
     <>
       <path d="M0 0H104V104H0V0Z" fill="current" />

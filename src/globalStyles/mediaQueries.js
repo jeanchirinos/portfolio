@@ -1,15 +1,16 @@
 import { css } from 'styled-components';
-import mediaQueries from '../style-guide/breakpoints';
+import media from '../style-guide/breakpoints';
 import { fontSize } from '../style-guide/font';
 
 export default css`
   //* XS */
-  ${mediaQueries.xs} {
+  ${media.xs} {
     --header_height: 5rem;
+    --scrollbar_width: 10px;
     --padding: 0.5rem;
     --sections_gap: calc(var(--header_height) * 2);
     --margin_top: calc(var(--header_height) + 2rem);
-    --100vw: calc(100vw - var(--padding) * 2 - 10px);
+    --100vw: calc(100vw - var(--padding) * 2 - var(--scrollbar_width));
     //*? FONT SIZE */
     --fs_1: ${fontSize._2};
     --fs_2: ${fontSize._3};
@@ -21,17 +22,17 @@ export default css`
   }
 
   //* SM */
-  ${mediaQueries.sm} {
+  ${media.sm} {
     --padding: 1rem;
   }
 
   //* MD */
-  ${mediaQueries.md} {
+  ${media.md} {
     --padding: 2rem;
   }
 
   //* LG */
-  ${mediaQueries.lg} {
+  ${media.lg} {
     --sections_gap: 0;
     --padding: 2.5rem;
     --margin_top: var(--header_height);
@@ -45,7 +46,7 @@ export default css`
   }
 
   //* XL */
-  ${mediaQueries.xl} {
+  ${media.xl} {
     --padding: 4rem;
   }
 `;

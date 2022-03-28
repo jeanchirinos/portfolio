@@ -1,6 +1,6 @@
 import useSettings from 'src/features/settingsSlice';
 import useTechnology from 'src/hooks/useTechnology';
-import mediaQueries from 'src/style-guide/breakpoints';
+import media from 'src/style-guide/breakpoints';
 import styled, { css } from 'styled-components';
 
 export default function BigIsotype({ name }) {
@@ -39,7 +39,7 @@ export const StyledIsotype = styled.svg(
       color: ${activeColor || 'white'};
     `}
 
-    ${mediaQueries.md} {
+    ${media.md} {
       :hover {
         transform: scale(1.1);
       }

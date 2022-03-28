@@ -1,10 +1,9 @@
-const breakpoints = { xs: 0, sm: 768, md: 1024, lg: 1366, xl: 1600 };
-const mediaQueries = {};
+const media = {
+  xs: '@media (min-width: 0px)',
+  sm: '@media (min-width: 768px)',
+  md: '@media (min-width: 1024px)',
+  lg: '@media (min-width: 1366px)',
+  xl: '@media (min-width: 1600px)',
+};
 
-Object.entries(breakpoints).forEach(breakpoint => {
-  const [key, value] = breakpoint;
-  const query = `@media (min-width: ${value}px)`;
-  mediaQueries[key] = query;
-});
-
-export default mediaQueries;
+export default media;
