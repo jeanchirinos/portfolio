@@ -25,10 +25,10 @@ export default function ListOfProjects() {
     return projectsToShow;
   }
 
-  return <StyledListOfProjects>{getProjects()}</StyledListOfProjects>;
+  return <S_ListOfProjects>{getProjects()}</S_ListOfProjects>;
 }
 
-const StyledListOfProjects = styled.div`
+const S_ListOfProjects = styled.div`
   display: grid;
   gap: 1.5rem;
   grid-auto-rows: 20rem;

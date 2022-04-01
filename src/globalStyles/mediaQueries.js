@@ -5,12 +5,13 @@ import { fontSize } from '../style-guide/font';
 export default css`
   //* XS */
   ${media.xs} {
-    --header_height: 5rem;
     --scrollbar_width: 10px;
+    --header_height: 5rem;
+    --margin-top: calc(var(--header_height) + 2rem);
+    --margin-bottom: var(--header_height);
     --padding: 0.5rem;
-    --sections_gap: calc(var(--header_height) * 2);
-    --margin_top: calc(var(--header_height) + 2rem);
     --100vw: calc(100vw - var(--padding) * 2 - var(--scrollbar_width));
+    --sections_gap: calc(var(--header_height) * 2);
     //*? FONT SIZE */
     --fs_1: ${fontSize._2};
     --fs_2: ${fontSize._3};
@@ -33,9 +34,10 @@ export default css`
 
   //* LG */
   ${media.lg} {
-    --sections_gap: 0;
+    --margin-top: var(--header_height);
+    --margin-bottom: 0;
     --padding: 2.5rem;
-    --margin_top: var(--header_height);
+    --sections_gap: 0;
     --fs_1: ${fontSize._1};
     --fs_2: ${fontSize._2};
     --fs_3: ${fontSize._3};

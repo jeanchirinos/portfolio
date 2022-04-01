@@ -7,17 +7,17 @@ import projects from 'src/data/projects';
 
 export default function Header() {
   return (
-    <StyledHeader>
+    <S_Header as="header">
       <Logo />
-      <Flex alignCenter gap="1.5rem">
+      <Flex alignCenter gap={1.5}>
         <ThemeSwitcher />
         <GithubLink link={projects[0].githubLink} />
       </Flex>
-    </StyledHeader>
+    </S_Header>
   );
 }
 
-const StyledHeader = styled(Container)`
+const S_Header = styled(Container)`
   backdrop-filter: blur(4px);
   width: 100%;
   height: var(--header_height);

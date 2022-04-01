@@ -5,10 +5,10 @@ export default function Test() {
   const theme = useTheme();
 
   return (
-    <StyledWrapper>
+    <S_Wrapper>
       <button onClick={() => console.log(theme)}>Click</button>
-    </StyledWrapper>
+    </S_Wrapper>
   );
 }
 
-const StyledWrapper = styled.div``;
+const S_Wrapper = styled.div``;

@@ -6,18 +6,18 @@ export default function ThemeSwitcher() {
   const { darkMode, toggleDarkMode } = useSettings();
 
   return (
-    <StyledModeSwitcher
+    <S_ModeSwitcher
       active={darkMode}
       onClick={toggleDarkMode}
       title="Cambia el tema"
     >
       <HiOutlineMoon />
       <HiOutlineSun />
-    </StyledModeSwitcher>
+    </S_ModeSwitcher>
   );
 }
 
-const StyledModeSwitcher = styled.div(
+const S_ModeSwitcher = styled.div(
   ({ active }) => css`
     background-color: ${active ? 'var(--primary_500)' : 'var(--light_800)'};
     color: white;

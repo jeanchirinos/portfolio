@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import toast from 'react-hot-toast';
 import SmallIsotype from 'components/Atoms/SmallIsotype';
 import GithubLink from 'components/Atoms/GithubLink';
-import { StyledExternalLink } from 'components/Atoms/ExternalLink';
+import { S_ExternalLink } from 'components/Atoms/ExternalLink';
 import { Flex } from 'components/StyledComponents';
 
 export default function ProjectCard({
@@ -30,21 +30,21 @@ export default function ProjectCard({
   ));
 
   return (
-    <StyledProjectCard img={img}>
+    <S_ProjectCard img={img}>
       {clickableSide}
       <div className="info">
         <p className="fs-big fw-bold">{name}</p>
-        <Flex gap="0.5rem">{usedTechnologies}</Flex>
+        <Flex gap={0.5}>{usedTechnologies}</Flex>
         <GithubLink link={githubLink} />
       </div>
-    </StyledProjectCard>
+    </S_ProjectCard>
   );
 }
 
-const StyledProjectCard = styled.div(
+const S_ProjectCard = styled.div(
   ({ img }) => css`
     display: grid;
-    grid: 75% 26% / 100%;
+    grid: 75% 25% / 100%;
     background-image: url(${img});
     background-size: cover;
     background-position: center;
@@ -71,7 +71,7 @@ const StyledProjectCard = styled.div(
       position: relative;
     }
 
-    ${StyledExternalLink} {
+    ${S_ExternalLink} {
       position: absolute;
       bottom: 0.8rem;
       right: 0.8rem;

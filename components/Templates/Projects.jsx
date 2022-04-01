@@ -5,16 +5,16 @@ import ListOfProjects from 'components/Organisms/ListOfProjects';
 
 export default function Projects() {
   return (
-    <StyledProjects>
+    <S_Projects>
       <h1>PROJECTS</h1>
       <TechnologiesFilter />
       <ListOfProjects />
-    </StyledProjects>
+    </S_Projects>
   );
 }
 
-const StyledProjects = styled(Section)`
+const S_Projects = styled(Section)`
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
+  row-gap: 3rem;
 `;

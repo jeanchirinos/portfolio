@@ -1,10 +1,10 @@
+import { S_Isotype } from 'components/StyledComponents';
 import useSettings from 'src/features/settingsSlice';
 import useTechnology from 'src/hooks/useTechnology';
-import media from 'src/style-guide/breakpoints';
 import styled, { css } from 'styled-components';
 
 export default function BigIsotype({ name }) {
-  const [component, color] = useTechnology(name);
+  const { component, color } = useTechnology(name);
   const { mainTechSelected, setMainTechSelected } = useSettings();
 
   function handleClick() {
@@ -18,31 +18,20 @@ export default function BigIsotype({ name }) {
     onClick: handleClick,
   };
 
-  return <StyledIsotype {...props}>{component}</StyledIsotype>;
+  return <S_BigIsotype {...props}>{component}</S_BigIsotype>;
 }
 
-export const StyledIsotype = styled.svg(
-  ({ active, color, activeColor }) => css`
-    fill: transparent;
+export const S_BigIsotype = styled(S_Isotype)(
+  ({ active, color }) => css`
     width: 6.5rem;
     height: 6.5rem;
-    transition: fill 0.3s, color 0.3s, transform 0.3s;
     cursor: pointer;
-
-    * {
-      pointer-events: none;
-    }
 
     ${active &&
     css`
       fill: ${color};
-      color: ${activeColor || 'white'};
+      color: white;
+      pointer-events: none;
     `}
-
-    ${media.md} {
-      :hover {
-        transform: scale(1.1);
-      }
-    }
   `
 );

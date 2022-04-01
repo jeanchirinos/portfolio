@@ -4,18 +4,17 @@ import styled from 'styled-components';
 
 export default function TechnologiesFilter() {
   return (
-    <StyledFilterIsotypes>
+    <S_TechnologiesFilter>
       {technologies.map(tech => (
         <FilterIsotype key={tech.name} {...tech} />
       ))}
-    </StyledFilterIsotypes>
+    </S_TechnologiesFilter>
   );
 }
 
-const StyledFilterIsotypes = styled.div`
+const S_TechnologiesFilter = styled.div`
   width: var(--100vw);
-  padding: 1rem 0;
   display: flex;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
   overflow-x: auto;
 `;

@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export default function ExternalLink({ children, link }) {
   return (
-    <StyledExternalLink href={link} target="_blank">
+    <S_ExternalLink href={link} target="_blank">
       {children}
-    </StyledExternalLink>
+    </S_ExternalLink>
   );
 }
 
-export const StyledExternalLink = styled.a`
+export const S_ExternalLink = styled.a`
   color: gray;
   display: flex;
   font-size: 1.5rem;

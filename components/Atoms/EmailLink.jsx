@@ -1,7 +1,7 @@
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { MdMail } from 'react-icons/md';
 import toast from 'react-hot-toast';
-import { StyledExternalLink } from './ExternalLink';
+import { S_ExternalLink } from './ExternalLink';
 import personalInfo from 'src/data/personalInfo';
 
 export default function EmailLink() {
@@ -11,9 +11,9 @@ export default function EmailLink() {
 
   return (
     <CopyToClipboard text={personalInfo.email} onCopy={handleCopy}>
-      <StyledExternalLink>
+      <S_ExternalLink>
         <MdMail />
-      </StyledExternalLink>
+      </S_ExternalLink>
     </CopyToClipboard>
   );
 }

@@ -4,12 +4,12 @@ import { keyframes } from 'styled-components';
 
 export default function AnimatedArrow() {
   return (
-    <StyledWrapper>
-      <StyledAnimatedArrow />
-    </StyledWrapper>
+    <S_Wrapper>
+      <S_AnimatedArrow />
+    </S_Wrapper>
   );
 }
-const StyledWrapper = styled.div`
+const S_Wrapper = styled.div`
   display: flex;
   justify-content: center;
 
@@ -33,7 +33,7 @@ const animate = angle => keyframes`
     }
 `;
 
-const StyledAnimatedArrow = styled.div`
+const S_AnimatedArrow = styled.div`
   width: 25px;
   height: 25px;
   border-bottom: 5px solid var(--primary_500);

@@ -10,7 +10,7 @@ export default function PersonalLinks() {
   const { github, linkedin } = links;
 
   return (
-    <Flex gap="0.8rem">
+    <Flex gap={0.8}>
       <GithubLink link={github} />
       <ExternalLink link={linkedin}>
         <AiFillLinkedin />

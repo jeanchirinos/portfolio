@@ -20,10 +20,6 @@ const settingsSlice = createSlice({
         s.darkMode = true;
         localStorage.darkMode = true;
       }
-
-      setTimeout(() => {
-        document.body.style.transition = 'background-color 0.5s';
-      }, 1000);
     },
     toggleDarkMode: s => {
       s.darkMode = !s.darkMode;

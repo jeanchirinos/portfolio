@@ -3,7 +3,7 @@ import { Flex } from 'components/StyledComponents';
 
 export default function MainIsotypes() {
   return (
-    <Flex gap="1rem" $wrap justifyCenter>
+    <Flex gap={1} $wrap justifyCenter>
       <BigIsotype name="React" />
       <BigIsotype name="Styled" />
       <BigIsotype name="Redux" />

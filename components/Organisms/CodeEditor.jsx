@@ -6,15 +6,15 @@ export default function CodeEditor() {
   const { mainTechSelected } = useSettings();
 
   return (
-    <StyledCodeEditor>
+    <S_CodeEditor>
       {mainTechSelected === 'React' && <CodeContent.React />}
       {mainTechSelected === 'Styled' && <CodeContent.StyledComponents />}
       {mainTechSelected === 'Redux' && <CodeContent.Redux />}
-    </StyledCodeEditor>
+    </S_CodeEditor>
   );
 }
 
-const StyledCodeEditor = styled.pre`
+const S_CodeEditor = styled.pre`
   background-color: var(--code_editor_background);
   width: min(450px, var(--100vw));
   height: 350px;

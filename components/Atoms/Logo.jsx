@@ -7,10 +7,10 @@ export default function Logo() {
     animateScroll.scrollToTop({ duration: 300 });
   }
 
-  return <StyledLogo onClick={scrollToTop} />;
+  return <S_Logo onClick={scrollToTop} />;
 }
 
-const StyledLogo = styled(SVGLogo)`
+const S_Logo = styled(SVGLogo)`
   color: var(--theme_500);
   cursor: pointer;
 `;

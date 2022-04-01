@@ -11,21 +11,21 @@ import AnimatedArrow from 'components/Atoms/AnimatedArrow';
 
 export default function Summary() {
   return (
-    <StyledSummary>
-      <Flex column fullCenter gap="0.5rem">
+    <S_Summary>
+      <Flex column fullCenter gap={0.5}>
         <h1>JEAN</h1>
         <h3>Frontend Developer</h3>
 
         <Image
-          alt="Personal Picture"
+          src={PersonalPicture}
           width={180}
           height={210}
-          src={PersonalPicture}
+          alt="Personal Picture"
         />
         <PersonalLinks />
       </Flex>
       <AnimatedArrow />
-      <Flex column fullCenter gap="1rem">
+      <Flex column fullCenter gap={1}>
         <MainIsotypes />
         <CodeEditor />
       </Flex>
@@ -39,16 +39,17 @@ export default function Summary() {
           alt="Project demo"
         />
       </Flex>
-    </StyledSummary>
+    </S_Summary>
   );
 }
 
-const StyledSummary = styled(Section)`
+const S_Summary = styled(Section)`
   display: grid;
-  gap: 2.5rem;
+  row-gap: 2.5rem;
 
   ${media.lg} {
-    gap: 0;
+    min-height: calc(100vh - var(--header_height));
     grid: 100% / calc(30% - 75px) 75px 40% 75px calc(30% - 75px);
+    row-gap: 0;
   }
 `;
