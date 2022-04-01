@@ -38,10 +38,10 @@ const StyledModeSwitcher = styled.div(
       border-radius: 50%;
       background-color: var(--theme_500);
       position: absolute;
-      left: 3px;
-      /* transform: ${active && 'translateX(24px)'};
-      transition: transform 0.5s; */
-      left: ${active && '27px'};
+      /* left: 3px;
+      transform: ${active && 'translateX(24px)'};
+      transition: transform 0.3s; */
+      left: ${active ? '27px' : '3px'};
       transition: left 0.3s;
     }
   `

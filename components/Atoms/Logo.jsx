@@ -12,6 +12,5 @@ export default function Logo() {
 
 const StyledLogo = styled(SVGLogo)`
   color: var(--theme_500);
-  width: 2.5rem;
   cursor: pointer;
 `;

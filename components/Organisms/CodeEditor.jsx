@@ -20,7 +20,6 @@ const StyledCodeEditor = styled.pre`
   height: 350px;
   padding: 1rem;
   border-radius: 8px;
-  position: relative;
   overflow-x: auto;
   overflow-y: hidden;
 

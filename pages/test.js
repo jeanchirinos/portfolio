@@ -1,29 +1,14 @@
-import CodeContent from 'components/Molecules/CodeContent';
 import styled from 'styled-components';
+import { useTheme } from 'styled-components';
 
-export default function test() {
+export default function Test() {
+  const theme = useTheme();
+
   return (
     <StyledWrapper>
-      {/* <div>
-        ¡Hola <span>mundo</span>
-      </div>
-      <div>¡Hola mundo</div> */}
-      <CodeContent.React />
+      <button onClick={() => console.log(theme)}>Click</button>
     </StyledWrapper>
   );
 }
 
-const StyledWrapper = styled.div`
-  div {
-    white-space: nowrap;
-    width: 100%;
-    animation: typing 5s;
-    overflow: hidden;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-`;
+const StyledWrapper = styled.div``;
