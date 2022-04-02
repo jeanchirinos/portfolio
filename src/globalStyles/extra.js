@@ -1,13 +1,16 @@
 import { css } from 'styled-components';
 
 export default css`
-  #__next {
+  body {
     background-color: var(--theme_500);
+    transition: background-color 0.3s;
+  }
+
+  #__next {
     display: grid;
     row-gap: var(--sections_gap);
     padding-top: var(--margin-top);
     padding-bottom: var(--margin-bottom);
-    transition: background-color 0.5s;
   }
 
   .toaster {

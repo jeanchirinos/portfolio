@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 //* INITIAL STATE
 const initialState = {
-  darkMode: null,
+  darkMode: undefined,
   mainTechSelected: 'React',
   activeTechs: ['React'],
 };

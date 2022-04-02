@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'src/globalStyles';
-import useSettings from 'src/features/settingsSlice';
-import { getInitialMode } from 'src/features/settingsSlice';
+import useSettings, { getInitialMode } from 'src/features/settingsSlice';
 import { darkTheme, lightTheme } from 'src/style-guide/themedColors';
 import CustomToaster from 'components/Atoms/CustomToaster';
 
@@ -18,10 +16,10 @@ export default function ComponentWrapper({ children }) {
   const theme = darkMode ? darkTheme : lightTheme;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      {children}
+    <>
+      <GlobalStyles theme={theme} />
       <CustomToaster />
-    </ThemeProvider>
+      {children}
+    </>
   );
 }
