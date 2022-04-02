@@ -22,6 +22,7 @@ const S_CodeEditor = styled.pre`
   border-radius: 8px;
   overflow-x: auto;
   overflow-y: hidden;
+  transition: background-color 0.3s;
 
   div {
     animation: typing 2s;

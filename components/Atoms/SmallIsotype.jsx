@@ -16,4 +16,5 @@ export default function SmallIsotype({ name }) {
 const S_SmallIsotype = styled(S_Isotype)`
   width: 1.3rem;
   height: 1.3rem;
+  pointer-events: none;
 `;

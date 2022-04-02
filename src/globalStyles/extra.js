@@ -2,8 +2,8 @@ import { css } from 'styled-components';
 
 export default css`
   body {
+    visibility: hidden;
     background-color: var(--theme_500);
-    transition: background-color 0.3s;
   }
 
   #__next {

@@ -1,7 +1,7 @@
-import ComponentWrapper from 'components/General/ComponentWrapper';
-import Head from 'next/head';
 import { Provider } from 'react-redux';
+import Head from 'next/head';
 import store from 'src/app/store';
+import ComponentWrapper from 'components/General/ComponentWrapper';
 
 export default function MyApp({ Component, pageProps }) {
   return (

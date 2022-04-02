@@ -50,6 +50,7 @@ const S_ProjectCard = styled.div(
     background-position: center;
     border-radius: 12px;
     box-shadow: var(--project_card_shadow);
+    transition: box-shadow 0.3s;
 
     .linkToWeb {
       border-radius: 12px 12px 0 0;
@@ -66,9 +67,10 @@ const S_ProjectCard = styled.div(
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-radius: 0 0 12px 12px;
+      border-radius: 0 0 10px 10px;
       padding: 0.8rem;
       position: relative;
+      transition: background-color 0.3s;
     }
 
     ${S_ExternalLink} {
