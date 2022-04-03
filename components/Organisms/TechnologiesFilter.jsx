@@ -17,4 +17,5 @@ const S_TechnologiesFilter = styled.div`
   display: flex;
   column-gap: 1.5rem;
   overflow-x: auto;
+  padding: 0.2rem 0;
 `;

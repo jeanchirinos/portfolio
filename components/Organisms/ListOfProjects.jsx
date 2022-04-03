@@ -36,6 +36,6 @@ const S_ListOfProjects = styled.div`
 
   ${media.sm} {
     grid-auto-rows: 23rem;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
   }
 `;

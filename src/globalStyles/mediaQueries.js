@@ -6,10 +6,10 @@ export default css`
   //* XS */
   ${media.xs} {
     --scrollbar_width: 10px;
-    --header_height: 5rem;
+    --header_height: 5.5rem;
     --margin-top: calc(var(--header_height) + 2rem);
     --margin-bottom: var(--header_height);
-    --padding: 0.5rem;
+    --padding: 0.8rem;
     --100vw: calc(100vw - var(--padding) * 2 - var(--scrollbar_width));
     --sections_gap: calc(var(--header_height) * 2);
     //*? FONT SIZE */
@@ -24,12 +24,12 @@ export default css`
 
   //* SM */
   ${media.sm} {
-    --padding: 1rem;
+    --padding: 3rem;
   }
 
   //* MD */
   ${media.md} {
-    --padding: 2rem;
+    --padding: 6rem;
   }
 
   //* LG */
@@ -49,6 +49,6 @@ export default css`
 
   //* XL */
   ${media.xl} {
-    --padding: 4rem;
+    --padding: 8rem;
   }
 `;

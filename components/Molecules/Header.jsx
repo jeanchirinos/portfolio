@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <S_Header as="header">
       <Logo />
-      <Flex alignCenter gap={1.5}>
+      <Flex alignCenter gap={2}>
         <ThemeSwitcher />
         <GithubLink link={projects[0].githubLink} />
       </Flex>
