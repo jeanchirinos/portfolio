@@ -1,9 +1,10 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import toast from 'react-hot-toast';
 import SmallIsotype from 'components/Atoms/SmallIsotype';
 import GithubLink from 'components/Atoms/GithubLink';
 import { S_ExternalLink } from 'components/Atoms/ExternalLink';
 import { Flex } from 'components/StyledComponents';
+import Image from 'next/image';
 
 export default function ProjectCard({
   name,
@@ -30,53 +31,52 @@ export default function ProjectCard({
   ));
 
   return (
-    <S_ProjectCard img={img}>
+    <S_ProjectCard>
+      <Image
+        alt={name}
+        src={img}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        // priority
+      />
       {clickableSide}
-      <div className="info">
+      <Flex column justify="space-between">
         <p className="fs-big fw-bold">{name}</p>
         <Flex gap={0.5}>{usedTechnologies}</Flex>
         <GithubLink link={githubLink} />
-      </div>
+      </Flex>
     </S_ProjectCard>
   );
 }
 
-const S_ProjectCard = styled.div(
-  ({ img }) => css`
-    display: grid;
-    grid: 75% 25% / 100%;
-    background-image: url(${img});
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-    box-shadow: var(--project_card_shadow);
-    transition: box-shadow 0.3s;
+const S_ProjectCard = styled.div`
+  display: grid;
+  grid: 75% 25% / 100%;
+  border-radius: 12px;
+  box-shadow: var(--project_card_shadow);
+  position: relative;
+  overflow: hidden;
 
-    .linkToWeb {
-      border-radius: 12px 12px 0 0;
-      cursor: pointer;
-      transition: background-color 0.3s;
+  .linkToWeb {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1;
 
-      :hover {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
+    :hover {
+      background-color: rgba(0, 0, 0, 0.1);
     }
+  }
 
-    .info {
-      background-color: var(--theme_500);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-radius: 0 0 10px 10px;
-      padding: 0.8rem;
-      position: relative;
-      transition: background-color 0.3s;
-    }
+  & > ${Flex} {
+    padding: 0.8rem;
+    background-color: var(--theme_500);
+    z-index: 1;
+  }
 
-    ${S_ExternalLink} {
-      position: absolute;
-      bottom: 0.8rem;
-      right: 0.8rem;
-    }
-  `
-);
+  ${S_ExternalLink} {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+`;

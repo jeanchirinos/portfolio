@@ -1,6 +1,6 @@
 import { S_Isotype } from 'components/StyledComponents';
 import useSettings from 'src/features/settingsSlice';
-import useTechnology from 'src/hooks/useTechnology';
+import useTechnology from 'components/Atoms/AllTechnologies';
 import styled, { css } from 'styled-components';
 
 export default function NormalIsotype({ name }) {

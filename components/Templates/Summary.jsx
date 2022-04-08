@@ -3,10 +3,10 @@ import Image from 'next/image';
 import PersonalLinks from 'components/Molecules/PersonalLinks';
 import MainIsotypes from 'components/Molecules/MainIsotypes';
 import CodeEditor from 'components/Organisms/CodeEditor';
-import PersonalPicture from 'static/img/PersonalPicture.png';
+import PersonalPicture from 'public/static/img/PersonalPicture.png';
 import { Flex, Section } from 'components/StyledComponents';
 import media from 'src/style-guide/breakpoints';
-import PortfolioDemo from 'static/img/PortfolioDemo.png';
+import PortfolioDemo from 'public/static/img/PortfolioDemo.png';
 import AnimatedArrow from 'components/Atoms/AnimatedArrow';
 
 export default function Summary() {

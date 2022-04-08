@@ -1,6 +1,13 @@
 import { React, Redux, Styled, Next, Js, Html } from './Isotype';
 
-const technologies = [
+export default function useTechnology(name) {
+  // Hook that returns the technology properties
+  const techSelected = technologies.find(tech => tech.name === name);
+
+  return { ...techSelected };
+}
+
+export const technologies = [
   {
     name: 'React',
     component: <React />,
@@ -35,5 +42,3 @@ const technologies = [
     color: '#e34c26',
   },
 ];
-
-export default technologies;

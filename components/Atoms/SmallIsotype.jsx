@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import useTechnology from 'src/hooks/useTechnology';
+import useTechnology from 'components/Atoms/AllTechnologies';
 import { S_Isotype } from 'components/StyledComponents';
 
 export default function SmallIsotype({ name }) {

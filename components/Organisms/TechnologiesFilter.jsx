@@ -1,4 +1,4 @@
-import technologies from 'components/Atoms/AllTechnologies';
+import { technologies } from 'components/Atoms/AllTechnologies';
 import FilterIsotype from 'components/Molecules/FilterIsotype';
 import styled from 'styled-components';
 
