@@ -1,10 +1,3 @@
-const personalInfo = {
-  name: 'Jean Chirinos',
-  email: 'JeanChirinos17@gmail.com',
-  links: {
-    github: 'https://github.com/jeanchirinos',
-    linkedin: 'https://www.linkedin.com/in/jeanchirinos',
-  },
-};
-
-export default personalInfo;
+export const EMAIL = 'JeanChirinos17@gmail.com';
+export const GITHUB = 'https://github.com/jeanchirinos';
+export const LINKEDIN = 'https://www.linkedin.com/in/jeanchirinos';

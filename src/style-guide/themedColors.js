@@ -1,5 +1,3 @@
-import { green } from './colors';
-
 const dark = {
   _100: '#6D6D6D',
   _200: '#5A5A5A',
@@ -14,8 +12,8 @@ const dark = {
   scrollbar_thumb: 'rgba(255, 255, 255, 0.2)',
   font: '#C7D1CE',
   font_light: '#B9C6C3',
-  toast_background: green._900,
-  toast_color: green._300,
+  toast_background: '#0f3327', //var(--primary_900)
+  toast_color: '#ace7d3', //var(--primary_300)
   project_card_shadow: '1px 4px 4px 1px rgba(0, 0, 0, 0.4)',
   code_editor_background: 'rgba(60, 60, 60, 0.3)',
 };
@@ -34,8 +32,8 @@ const light = {
   scrollbar_thumb: 'rgba(0, 0, 0, 0.2)',
   font: '#45544F',
   font_light: '#808080',
-  toast_background: green._100,
-  toast_color: green._700,
+  toast_background: '#e3f7f0', //var(--primary_100)
+  toast_color: '#2d9a76', //var(--primary_700)
   project_card_shadow: '1px 4px 4px 1px rgba(194, 194, 194, 0.4)',
   code_editor_background: 'rgba(250, 250, 250, 0.8)',
 };

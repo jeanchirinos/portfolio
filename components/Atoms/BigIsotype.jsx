@@ -21,11 +21,24 @@ export default function BigIsotype({ name }) {
   return <S_BigIsotype {...props}>{component}</S_BigIsotype>;
 }
 
-export const S_BigIsotype = styled(S_Isotype)(
+export const S_BigIsotype = styled.svg(
   ({ active, color }) => css`
     width: 6.5rem;
     height: 6.5rem;
     cursor: pointer;
+
+    fill: transparent;
+    transition: fill 0.3s, color 0.3s, transform 0.3s;
+
+    * {
+      pointer-events: none;
+    }
+
+    @media (hover: hover) {
+      :hover {
+        transform: scale(1.1);
+      }
+    }
 
     ${active &&
     css`

@@ -13,8 +13,9 @@ export default function SmallIsotype({ name }) {
   return <S_SmallIsotype {...props}>{component}</S_SmallIsotype>;
 }
 
-const S_SmallIsotype = styled(S_Isotype)`
+const S_SmallIsotype = styled.svg`
   width: 1.3rem;
   height: 1.3rem;
+  fill: transparent;
   pointer-events: none;
 `;

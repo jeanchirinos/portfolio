@@ -22,15 +22,15 @@ export function React() {
         <Pun>{'('}</Pun>
       </Line>
       <Line i={2}>
-        <Tag>StyledSummary</Tag>
+        <Tag>S_Summary</Tag>
       </Line>
       <Line i={3}>
         <Pun>{'<'}</Pun>
         <Com>Flex </Com>
         <Att>column fullCenter gap</Att>
-        <Pun>{"='"}</Pun>
-        <Str>0.5rem</Str>
-        <Pun>{"'>"}</Pun>
+        <Pun>{'={'}</Pun>
+        <Str>0.5</Str>
+        <Pun>{'}>'}</Pun>
       </Line>
       <Line i={4}>
         <Tag html>h1</Tag>
@@ -56,7 +56,7 @@ export function React() {
         <Tag toClose>Flex</Tag>
       </Line>
       <Line i={2}>
-        <Tag toClose>StyledSummary</Tag>
+        <Tag toClose>S_Summary</Tag>
       </Line>
       <Line i={1}>
         <Pun>{')'}</Pun>
@@ -73,7 +73,7 @@ export function StyledComponents() {
     <>
       <Line>
         <Key>const </Key>
-        <Fun>StyledHeader </Fun>
+        <Fun>S_Header </Fun>
         <Pun>{'= '}</Pun>
         <Fun>styled</Fun>
         <Pun>{'('}</Pun>
@@ -81,14 +81,14 @@ export function StyledComponents() {
         <Pun>{')`'}</Pun>
       </Line>
       <br />
+      <Style i={1} prop="backdrop-filter">
+        blur(4px)
+      </Style>
       <Style i={1} prop="width">
         100%
       </Style>
       <Style i={1} prop="height">
         var(--headerHeight)
-      </Style>
-      <Style i={1} prop="backdrop-filter">
-        blur(2px)
       </Style>
       <Style i={1} prop="display">
         flex
@@ -106,7 +106,7 @@ export function StyledComponents() {
         0
       </Style>
       <Style i={1} prop="z-index">
-        1
+        9
       </Style>
       <Line>
         <Pun>{'`'}</Pun>

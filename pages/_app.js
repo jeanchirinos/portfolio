@@ -5,17 +5,15 @@ import ComponentWrapper from 'components/General/ComponentWrapper';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Provider store={store}>
-        <Head>
-          <title>Jean Chirinos Portfolio</title>
-          <meta name="description" content="Jean Chirinos Portfolio" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <ComponentWrapper>
-          <Component {...pageProps} />
-        </ComponentWrapper>
-      </Provider>
-    </>
+    <Provider store={store}>
+      <Head>
+        <title>Jean Chirinos Portfolio</title>
+        <meta name="description" content="Jean Chirinos Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ComponentWrapper>
+        <Component {...pageProps} />
+      </ComponentWrapper>
+    </Provider>
   );
 }

@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 import media from '../style-guide/breakpoints';
-import { fontSize } from '../style-guide/font';
+import { fontSize } from '../style-guide/fontSize';
 
 export default css`
   //* XS */

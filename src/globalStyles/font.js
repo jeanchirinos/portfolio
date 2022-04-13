@@ -1,23 +1,25 @@
 import { css } from 'styled-components';
-import { fontFamily, fontWeight, lineHeight } from '../style-guide/font';
 
 export const fontVars = css`
+  /* FONT FAMILY */
+  --ff_heading: 'Raleway';
+  --ff_text: 'Prompt';
   /* LINE HEIGHT */
-  --lh_1: ${lineHeight._1};
-  --lh_2: ${lineHeight._2};
-  --lh_3: ${lineHeight._3};
+  --lh_1: 130%;
+  --lh_2: 150%;
+  --lh_3: 170%;
   /* FONT WEIGHT */
-  --fw_black: ${fontWeight.black};
-  --fw_bold: ${fontWeight.bold};
-  --fw_regular: ${fontWeight.regular};
-  --fw_light: ${fontWeight.light};
+  --fw_black: 900;
+  --fw_bold: 700;
+  --fw_regular: 400;
+  --fw_light: 300;
 `;
 
 export default css`
   //* DEFAULT  */
   body {
     color: var(--font);
-    font-family: ${fontFamily.text};
+    font-family: var(--ff_text);
     font-size: var(--fs_6);
     line-height: var(--lh_3);
     font-weight: var(--fw_regular);
@@ -28,7 +30,7 @@ export default css`
   h2,
   h3,
   h4 {
-    font-family: ${fontFamily.heading};
+    font-family: var(--ff_heading);
     line-height: var(--lh_1);
   }
 

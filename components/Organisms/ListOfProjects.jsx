@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import projects from 'src/data/projects';
 import media from 'src/style-guide/breakpoints';
-import ProjectCard from 'components/Molecules/ProjectCard';
 import useSettings from 'src/features/settingsSlice';
+import projects from 'src/data/projects';
+import ProjectCard from 'components/Molecules/ProjectCard';
 
 export default function ListOfProjects() {
   const { activeTechs } = useSettings();
@@ -13,26 +13,18 @@ export default function ListOfProjects() {
     );
   }
 
-  function getProjects() {
-    const filteredProjects = projects.filter(project =>
-      includesTechsSelected(project)
-    );
+  const projectsGrid = projects
+    .filter(project => includesTechsSelected(project))
+    .map(project => <ProjectCard key={project.name} {...project} />);
 
-    const projectsToShow = filteredProjects.map(project => (
-      <ProjectCard key={project.name} {...project} />
-    ));
-
-    return projectsToShow;
-  }
-
-  return <S_ListOfProjects>{getProjects()}</S_ListOfProjects>;
+  return <S_ListOfProjects>{projectsGrid}</S_ListOfProjects>;
 }
 
 const S_ListOfProjects = styled.div`
   display: grid;
-  gap: 1.5rem;
   grid-auto-rows: 20rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: 1.5rem;
 
   ${media.sm} {
     grid-auto-rows: 23rem;

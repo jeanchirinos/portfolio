@@ -19,6 +19,8 @@ export const Flex = styled.article(
     align,
     $wrap,
     gap,
+    c_gap,
+    r_gap,
   }) => css`
     display: flex;
 
@@ -31,7 +33,10 @@ export const Flex = styled.article(
     align-items: ${align};
 
     flex-wrap: ${$wrap && 'wrap'};
-    gap: ${`${gap}rem`};
+
+    gap: ${gap && `${gap}rem`};
+    column-gap: ${c_gap && `${c_gap}rem`};
+    row-gap: ${r_gap && `${c_gap}rem`};
 
     ${fullCenter &&
     css`
@@ -40,19 +45,3 @@ export const Flex = styled.article(
     `}
   `
 );
-
-//* SPECIFIC
-export const S_Isotype = styled.svg`
-  fill: transparent;
-  transition: fill 0.3s, color 0.3s, transform 0.3s;
-
-  * {
-    pointer-events: none;
-  }
-
-  @media (hover: hover) {
-    :hover {
-      transform: scale(1.1);
-    }
-  }
-`;

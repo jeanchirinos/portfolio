@@ -18,11 +18,23 @@ export default function NormalIsotype({ name }) {
   return <S_NormalIsotype {...props}>{component}</S_NormalIsotype>;
 }
 
-const S_NormalIsotype = styled(S_Isotype)(
+const S_NormalIsotype = styled.svg(
   ({ active, color, activeColor }) => css`
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    fill: transparent;
+    transition: fill 0.3s, color 0.3s, transform 0.3s;
+
+    * {
+      pointer-events: none;
+    }
+
+    @media (hover: hover) {
+      :hover {
+        transform: scale(1.1);
+      }
+    }
 
     ${active &&
     css`

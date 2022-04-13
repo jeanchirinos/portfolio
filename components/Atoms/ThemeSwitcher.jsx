@@ -9,7 +9,7 @@ export default function ThemeSwitcher() {
     <S_ModeSwitcher
       active={darkMode}
       onClick={toggleDarkMode}
-      title="Cambia el tema"
+      title="🌔 Change theme"
     >
       <HiOutlineMoon />
       <HiOutlineSun />
