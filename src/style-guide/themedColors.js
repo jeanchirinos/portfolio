@@ -8,7 +8,6 @@ const dark = {
   _700: '#141414',
   _800: '#0D0D0D',
   _900: '#070707',
-  //
   scrollbar_thumb: 'rgba(255, 255, 255, 0.2)',
   font: '#C7D1CE',
   font_light: '#B9C6C3',
@@ -28,7 +27,6 @@ const light = {
   _700: '#C3C0C1',
   _800: '#ACABAC',
   _900: '#969596',
-  //
   scrollbar_thumb: 'rgba(0, 0, 0, 0.2)',
   font: '#45544F',
   font_light: '#808080',

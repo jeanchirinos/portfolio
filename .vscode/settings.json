@@ -6,7 +6,7 @@
     "jsconfig.json": true,
     "next.config.js": true,
     "node_modules": true,
-    "package.json": true,
+    "package.json": false,
     "public": false,
     "README.md": true,
     "yarn.lock": true,
