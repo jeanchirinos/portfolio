@@ -11,7 +11,15 @@ export default function ComponentWrapper({ children }) {
 
   useEffect(() => {
     dispatch(getInitialMode());
+    console.log('hey');
   }, [dispatch]);
+
+  // if (typeof window !== 'undefined') {
+  //   dispatch(getInitialMode());
+  //   console.log('hola');
+  // } else {
+  //   console.log('adios');
+  // }
 
   const theme = darkMode ? darkTheme : lightTheme;
 

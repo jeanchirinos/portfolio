@@ -22,7 +22,7 @@ const settingsSlice = createSlice({
       }
 
       setTimeout(() => {
-        document.body.style.visibility = 'visible';
+        // document.body.style.visibility = 'visible';
         document.body.style.transition = 'background-color 0.3s';
       }, 100);
     },

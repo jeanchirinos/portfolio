@@ -19,7 +19,7 @@ export default css`
   //* DEFAULT  */
   body {
     color: var(--font);
-    font-family: var(--ff_text);
+    font-family: var(--ff_text), sans-serif;
     font-size: var(--fs_6);
     line-height: var(--lh_3);
     font-weight: var(--fw_regular);
@@ -30,7 +30,7 @@ export default css`
   h2,
   h3,
   h4 {
-    font-family: var(--ff_heading);
+    font-family: var(--ff_heading), sans-serif;
     line-height: var(--lh_1);
   }
 

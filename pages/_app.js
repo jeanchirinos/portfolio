@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Head>
-        <title>Jean Chirinos Portfolio</title>
+        <title>Jean Chirinos - Portfolio</title>
         <meta name="description" content="Jean Chirinos Portfolio" />
       </Head>
       <ComponentWrapper>

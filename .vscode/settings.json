@@ -4,7 +4,7 @@
     ".gitignore": true,
     ".next": true,
     "jsconfig.json": true,
-    "next.config.js": true,
+    "next.config.js": false,
     "node_modules": true,
     "package.json": true,
     "public": false,
