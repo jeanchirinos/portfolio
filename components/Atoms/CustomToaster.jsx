@@ -1,4 +1,5 @@
 import { Toaster } from 'react-hot-toast';
+import styled from 'styled-components';
 
 export default function CustomToaster() {
   const props = {
@@ -7,5 +8,11 @@ export default function CustomToaster() {
     containerStyle: { outlineColor: 'transparent' },
   };
 
-  return <Toaster {...props} />;
+  return <Hola {...props} />;
 }
+
+const Hola = styled(Toaster)`
+  div {
+    color: red !important;
+  }
+`;

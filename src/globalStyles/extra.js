@@ -12,7 +12,7 @@ export default css`
     padding-bottom: var(--margin-bottom);
   }
 
-  .toaster {
+  div.toaster {
     background-color: var(--toast_background);
     color: var(--toast_color);
   }

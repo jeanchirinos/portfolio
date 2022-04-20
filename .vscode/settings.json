@@ -4,7 +4,7 @@
     ".gitignore": true,
     ".next": true,
     "jsconfig.json": true,
-    "next.config.js": false,
+    "next.config.js": true,
     "node_modules": true,
     "package.json": true,
     "public": false,
@@ -13,7 +13,6 @@
   },
   "cSpell.words": [
     "isotype",
-    "noflash",
     "palevioletred",
     "raleway"
   ],
