@@ -41,8 +41,8 @@ export default function ProjectCard({
       {clickableSide}
       <Flex column justify="space-between">
         <p className="fs-big fw-bold">{name}</p>
-        <Flex justify="space-between" alignCenter>
-          <Flex gap={0.5}>{usedTechs}</Flex>
+        <Flex justify="space-between" align="baseline">
+          <Flex columnGap={0.5}>{usedTechs}</Flex>
           <GithubLink link={githubLink} />
         </Flex>
       </Flex>

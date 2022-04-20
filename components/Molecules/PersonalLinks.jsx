@@ -7,7 +7,7 @@ import EmailLink from 'components/Atoms/EmailLink';
 
 export default function PersonalLinks() {
   return (
-    <Flex gap={0.8}>
+    <Flex columnGap={0.8}>
       <GithubLink link={GITHUB} />
       <ExternalLink link={LINKEDIN}>
         <AiFillLinkedin />

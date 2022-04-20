@@ -19,8 +19,8 @@ export const Flex = styled.article(
     align,
     $wrap,
     gap,
-    c_gap,
-    r_gap,
+    columnGap,
+    rowGap,
   }) => css`
     display: flex;
 
@@ -35,8 +35,8 @@ export const Flex = styled.article(
     flex-wrap: ${$wrap && 'wrap'};
 
     gap: ${gap && `${gap}rem`};
-    column-gap: ${c_gap && `${c_gap}rem`};
-    row-gap: ${r_gap && `${c_gap}rem`};
+    column-gap: ${columnGap && `${columnGap}rem`};
+    row-gap: ${rowGap && `${rowGap}rem`};
 
     ${fullCenter &&
     css`

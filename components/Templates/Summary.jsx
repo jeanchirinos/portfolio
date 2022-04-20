@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import media from 'src/style-guide/breakpoints';
+import PersonalPicture from 'public/img/PersonalPicture.png';
+import PortfolioDemo from 'public/img/PortfolioDemo.png';
+import { Flex, Section } from 'components/StyledComponents';
+import CodeEditor from 'components/Organisms/CodeEditor';
 import PersonalLinks from 'components/Molecules/PersonalLinks';
 import MainIsotypes from 'components/Molecules/MainIsotypes';
-import CodeEditor from 'components/Organisms/CodeEditor';
-import PersonalPicture from 'public/static/img/PersonalPicture.png';
-import { Flex, Section } from 'components/StyledComponents';
-import media from 'src/style-guide/breakpoints';
-import PortfolioDemo from 'public/static/img/PortfolioDemo.png';
 import AnimatedArrow from 'components/Atoms/AnimatedArrow';
 
 export default function Summary() {
   return (
     <S_Summary>
-      <Flex column fullCenter gap={0.5}>
+      <Flex column fullCenter rowGap={0.5}>
         <h1>JEAN</h1>
         <h3>Frontend Developer</h3>
 
@@ -25,7 +25,7 @@ export default function Summary() {
         <PersonalLinks />
       </Flex>
       <AnimatedArrow />
-      <Flex column fullCenter gap={1}>
+      <Flex column fullCenter rowGap={1}>
         <MainIsotypes />
         <CodeEditor />
       </Flex>

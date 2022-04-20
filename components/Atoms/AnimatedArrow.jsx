@@ -15,7 +15,6 @@ const S_Wrapper = styled.div`
 
   ${media.lg} {
     flex-direction: column;
-    height: 100%;
   }
 `;
 

@@ -1,7 +1,7 @@
 import { GITHUB } from './personalInfo';
-import Portfolio from 'public/static/img/Portfolio.png';
-import FilesHandling from 'public/static/img/FilesHandling.png';
-import OhCloud from 'public/static/img/OhCloud.png';
+import Portfolio from 'public/img/Portfolio.png';
+import FilesHandling from 'public/img/FilesHandling.png';
+import OhCloud from 'public/img/OhCloud.png';
 
 const projects = [
   {

@@ -27,7 +27,7 @@ export function React() {
       <Line i={3}>
         <Pun>{'<'}</Pun>
         <Com>Flex </Com>
-        <Att>column fullCenter gap</Att>
+        <Att>column fullCenter rowGap</Att>
         <Pun>{'={'}</Pun>
         <Str>0.5</Str>
         <Pun>{'}>'}</Pun>
